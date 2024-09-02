@@ -1,8 +1,6 @@
-import { useReducer, useRef } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import taskReducer from "../reducer/taskReducer";
-import store from "../store";
 import TaskInput from "./TaskInput";
 import TaskList from "./TaskList";
 
@@ -12,7 +10,7 @@ const TaskManager = () => {
   const taskInput = useRef();
   const addTask = () => {
     console.log(taskInput.current.value);
-    dispatch({ type: "Add", payload: taskInput.current.value });
+    dispatch({ type: "ADD", payload: taskInput.current.value });
   };
   return (
     <>

@@ -1,8 +1,11 @@
 const TaskList = ({ tasks }) => {
-  console.log("TaskList", tasks);
   return (
     <>
-      {tasks.length ? tasks.map((item) => <li>{item}</li>) : <li>Task name</li>}
+      {tasks.length ? (
+        tasks.map((item) => <li>{item}</li>)
+      ) : (
+        <li>Add a task</li>
+      )}
     </>
   );
 };

@@ -6,12 +6,10 @@ const initialState = {
 
 const taskReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "Add":
+    case "ADD":
       return { ...state, tasks: [...state.tasks, action.payload] };
-      break;
     default:
       return { ...state };
-      break;
   }
 };
 
